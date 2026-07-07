@@ -48,3 +48,50 @@ handleBtn.addEventListener("click", function () {
 
 
 
+
+let container = document.getElementById("container");
+
+const card = document.createElement("div");
+let name = "Bayjid Alom";
+
+card.innerHTML = `
+        <div>
+            <h3>My name is ${name}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, et quasi officia labore excepturi est!</p>
+            <button>Click</button>
+        </div>
+`
+
+container.appendChild(card)
+
+
+
+
+
+// Delegation
+const delegation = document.getElementById("body");
+delegation.addEventListener("click", function (event) {
+    // console.log(event.target.parentNode)
+    const button = event.target.closest(".click-btn");
+})
+
+
+
+
+
+
+
+// if item not exist -> find -> undefined
+// if item not exist -> filter -> []
+
+let arr = [1, 2, 5, 7,5];
+
+// আইটেম বাদ দিয়ে নতুন এরে ।
+const filterMethod = arr.filter(item => item != 7);  // [1, 2, 5, 5]
+console.log(filterMethod)
+arr = filterMethod;
+console.log(arr)
+
+
+
+
