@@ -11,3 +11,13 @@
 [Visit : DOM Project 🔥](https://bayjid-alom.github.io/dom-Interactions/)
 
 ---
+
+
+### To get tailwindCSS suggessions
+```
+Way - 01
+tailwind.config.js
+
+Way - 02
+tailwind.init.css
+└── @import "tailwindcss";
