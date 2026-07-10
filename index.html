@@ -34,20 +34,61 @@
             </div>
 
         </div>
+        <hr class="my-6 border-gray-400 ">
     </header>
 
 
-    <hr class="my-6 border-gray-400 ">
 
 
-    <main class="max-w-[80%] mx-auto border border-gray-200">
+    <main class="max-w-[80%] mx-auto ">
         <!-- Buttons container -->
-        <div>
+        <div class="mb-5">
             <button class="bg-black text-white px-5 py-2 rounded-md mr-2" id="all-filter-btn">All</button>
             <button class="bg-gray-300 px-5 py-2 rounded-md mr-2" id="thriving-filter-btn">Thriving</button>
             <button class="bg-gray-300 px-5 py-2 rounded-md mr-2" id="struggling-filter-btn">Struggling</button>
 
         </div>
+
+
+
+
+
+        <section id="all-cards ">
+
+            <!-- Card -->
+            <div
+                class="card flex justify-between my-6 py-6 border border-gray-300 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1  p-4">
+                <div class="leftside space-y-6">
+                    <!-- part - 01 -->
+                    <div>
+                        <p class="plantName text-4xl">Plant Name 01</p>
+                        <p class="latinName">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-3">
+                        <p class="light bg-gray-200 rounded-md px-3 py-1">Bright Indicate</p>
+                        <p class="water bg-gray-200 rounded-md px-3 py-1">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                    <div>
+                        <p class="status">Not Applicable</p>
+                        <p class="notes">New leaf unfurling by the east window.</p>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <button class="thriving-btn bg-green-200 px-4 py-2 rounded-md">Thrive</button>
+                        <button class="struggling-btn bg-red-200 px-4 py-2 rounded-md">Struggle</button>
+                    </div>
+                </div>
+
+
+                <div class="rightside">
+                    <button class="bg-red-100 px-4 py-2 rounded-md text-red-500">Delete</button>
+                </div>
+            </div>
+
+        </section>
+
 
     </main>
 
