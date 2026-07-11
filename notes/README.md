@@ -78,28 +78,5 @@ Thrive count : 3
 
 ###  Toggling Part - 01
 
- ```
-
-let thrivingList = [];
-let strugglingList = []
-
-let total = document.getElementById("total");
-let thrivingCount = document.getElementById("thriving-count");
-let strugglingCount = document.getElementById("struggling-count")
-
-let mainContainer = document.querySelector("main");
-let allCardSection = document.getElementById("all-cards");
-
-function calculateCount() {
-    total.innerText = allCardSection.children.length;
-    thrivingCount.innerText = thrivingList.length;
-    strugglingCount.innerText = strugglingList.length;
-}
-calculateCount()
-
-
-function toggleStyle(id) {
-    console.log("button clicked")
-}
-```
+ 
 

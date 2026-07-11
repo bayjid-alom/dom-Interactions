@@ -14,23 +14,23 @@
 <body>
 
     <header class=" mx-auto max-w-[80%] space-y-7">
-        <h1 class="text-6xl font-bold text-green-500">Plant Tracker</h1>
+        <h1 class="text-6xl font-bold text-green-500 mt-4">Plant Tracker</h1>
 
         <div class="con-tainer grid grid-cols-3 gap-4">
 
             <div class="div-1 bg-sky-100 p-4 border-black/50 rounded-xl">
-                <p>Total</p>
-                <p id="total">0</p>
+                <p class="text-2xl font-semibold text-gray-600">Total</p>
+                <p class="text-3xl font-bold text-gray-500" id="total">0</p>
             </div>
 
             <div class="div-2 bg-green-100 p-4 border-black/50 rounded-xl">
-                <p>Thrive</p>
-                <p id="thriving-count">0</p>
+                <p class="text-2xl font-semibold text-gray-600">Thrive</p>
+                <p class="text-3xl font-bold text-green-500" id="thriving-count">0</p>
             </div>
 
             <div class="div-3 bg-red-100 p-4 border-black/50 rounded-xl">
-                <p>Struggling</p>
-                <p id="struggling-count">0</p>
+                <p class="text-2xl font-semibold text-gray-600">Struggling</p>
+                <p class="text-3xl font-bold text-red-500" id="struggling-count">0</p>
             </div>
 
         </div>
@@ -43,11 +43,14 @@
     <main class="max-w-[80%] mx-auto ">
         <!-- Buttons container -->
         <div class="mb-5">
-            <button onclick="toggleStyle('all-filter-btn')" class="bg-black text-white px-5 py-2 rounded-md mr-2" id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-black text-white px-5 py-2 rounded-md mr-2"
+                id="all-filter-btn">All</button>
 
-            <button onclick="toggleStyle('thriving-filter-btn')" class="bg-gray-300 px-5 py-2 rounded-md mr-2" id="thriving-filter-btn">Thriving</button>
+            <button onclick="toggleStyle('thriving-filter-btn')" class="bg-gray-300 px-5 py-2 rounded-md mr-2"
+                id="thriving-filter-btn">Thriving</button>
 
-            <button onclick="toggleStyle('struggling-filter-btn')"  class="bg-gray-300 px-5 py-2 rounded-md mr-2" id="struggling-filter-btn">Struggling</button>
+            <button onclick="toggleStyle('struggling-filter-btn')" class="bg-gray-300 px-5 py-2 rounded-md mr-2"
+                id="struggling-filter-btn">Struggling</button>
 
         </div>
 
@@ -78,14 +81,18 @@
                     </div>
 
                     <div class="flex gap-4">
-                        <button class="thriving-btn bg-green-200 px-4 py-2 rounded-md">Thrive</button>
-                        <button class="struggling-btn bg-red-200 px-4 py-2 rounded-md">Struggle</button>
+                        <button
+                            class="thriving-btn bg-green-200 px-4 py-2 rounded-md border border-green-200  hover:border hover:border-green-500 transition-all duration-300 ease-in-out">Thrive</button>
+
+                        <button
+                            class="struggling-btn bg-red-200 px-4 py-2 rounded-md border border-red-200  hover:border hover:border-red-500 transition-all duration-300 ease-in-out">Struggle</button>
                     </div>
                 </div>
 
 
                 <div class="rightside">
-                    <button class="bg-red-100 px-4 py-2 rounded-md text-red-500">Delete</button>
+                    <button
+                        class="bg-red-100 text-red-500 px-4 py-2 rounded-md border border-red-200  hover:border hover:border-red-500 transition-all duration-300 ease-in-out">Delete</button>
                 </div>
             </div>
 
@@ -110,14 +117,18 @@
                     </div>
 
                     <div class="flex gap-4">
-                        <button class="thriving-btn bg-green-200 px-4 py-2 rounded-md">Thrive</button>
-                        <button class="struggling-btn bg-red-200 px-4 py-2 rounded-md">Struggle</button>
+                        <button
+                            class="thriving-btn bg-green-200 px-4 py-2 rounded-md border border-green-200  hover:border hover:border-green-500 transition-all duration-300 ease-in-out">Thrive</button>
+
+                        <button
+                            class="struggling-btn bg-red-200 px-4 py-2 rounded-md border border-red-200  hover:border hover:border-red-500 transition-all duration-300 ease-in-out">Struggle</button>
                     </div>
                 </div>
 
 
                 <div class="rightside">
-                    <button class="bg-red-100 px-4 py-2 rounded-md text-red-500">Delete</button>
+                    <button
+                        class="bg-red-100 px-4 py-2 rounded-md text-red-500 border border-red-200  hover:border hover:border-red-500 transition-all duration-300 ease-in-out">Delete</button>
                 </div>
             </div>
             <!-- Card 03-->
@@ -141,17 +152,21 @@
                     </div>
 
                     <div class="flex gap-4">
-                        <button class="thriving-btn bg-green-200 px-4 py-2 rounded-md">Thrive</button>
-                        <button class="struggling-btn bg-red-200 px-4 py-2 rounded-md">Struggle</button>
+                        <button
+                            class="thriving-btn bg-green-200 px-4 py-2 rounded-md border border-green-200  hover:border hover:border-green-500 transition-all duration-300 ease-in-out">Thrive</button>
+
+                        <button
+                            class="struggling-btn bg-red-200 px-4 py-2 rounded-md border border-red-200  hover:border hover:border-red-500 transition-all duration-300 ease-in-out">Struggle</button>
                     </div>
                 </div>
 
 
                 <div class="rightside">
-                    <button class="bg-red-100 px-4 py-2 rounded-md text-red-500">Delete</button>
+                    <button
+                        class="bg-red-100 px-4 py-2 rounded-md text-red-500 border border-red-200  hover:border hover:border-red-500 transition-all duration-300 ease-in-out">Delete</button>
                 </div>
             </div>
-            
+
 
         </section>
 
