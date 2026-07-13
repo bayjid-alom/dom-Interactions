@@ -47,3 +47,34 @@ function toggleStyle(id) {
 }
 
 
+
+
+/****
+ mainContainer-এর ভিতরে user যেই card-এ click করে, event.target.parentNode.parentNode ব্যবহার করে সেই card-টিকে (parentNode) select করা হচ্ছে। এরপর parentNode.querySelector() দিয়ে ওই card-এর plantName, latinName, light, water, status এবং notes-এর text (innerText) বের করে আলাদা JavaScript variable-এ store করা হচ্ছে।  ****/
+mainContainer.addEventListener("click", function (event) {
+    const parentNode = event.target.parentNode.parentNode;
+    const plantName = parentNode.querySelector(".plantName").innerText;
+    const latinName = parentNode.querySelector(".latinName").innerText;
+
+    const light = parentNode.querySelector(".light").innerText;
+    const water = parentNode.querySelector(".water").innerText;
+
+    const status = parentNode.querySelector(".status").innerText;
+    const notes = parentNode.querySelector(".notes").innerText;
+
+    console.log(plantName, light, water, status, notes)
+
+    const cardInfo = {
+        plantName,
+        latinName,
+        light,
+        water,
+        status,
+        notes
+    }
+
+    console.log(cardInfo)
+
+})
+
+

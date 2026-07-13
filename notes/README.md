@@ -1,14 +1,14 @@
 > **Functionality Thinking Process**
 
 ## Toggling
-### 1st
+### Firstly
 - total count find out
 - total --> allcards er length
 - all card er child er number 
 - console.log(allCardSection.children.length)
 - calculateCount()
 
-### 2nd -- empty array
+### Secondly -- empty array
 
 - thrivingList = [];
 -  thrivingCount.innerText = thrivingList.length;
@@ -32,7 +32,7 @@ Thrive count : 3
 
 
 
-### why not add bg-black?  first remove bg-gray
+### Why not add bg-black?  first remove bg-gray
 ```
   function toggleStyle(id) {
     // console.log("clicked", id)
@@ -63,20 +63,49 @@ Thrive count : 3
 
 
 
+## 🔥 Rest of the projet - Part-01
+- get the main container
+```
+const mainContainer = document.querySelector("main");
+```
+- Information gather from the targetted card ✔️..
 
 
 
+```
+ ✔️ mainContainer-এর ভিতরে user যেই card-এ click করে, event.target.parentNode.parentNode ব্যবহার করে সেই card-টিকে (parentNode) select করা হচ্ছে। এরপর parentNode.querySelector() দিয়ে ওই card-এর plantName, latinName, light, water, status এবং notes-এর text (innerText) বের করে আলাদা JavaScript variable-এ store করা হচ্ছে।  
 
 
+mainContainer.addEventListener("click", function (event) {
+    const parentNode = event.target.parentNode.parentNode;
+    const plantName = parentNode.querySelector(".plantName").innerText;
+    const latinName = parentNode.querySelector(".latinName").innerText;
+
+    const light = parentNode.querySelector(".light").innerText;
+    const water = parentNode.querySelector(".water").innerText;
+
+    const status = parentNode.querySelector(".status").innerText;
+    const notes = parentNode.querySelector(".notes").innerText;
+
+    console.log(plantName, light, water, status, notes)
+ 
+})
+```
+
+```
+✔️ Make an object with card Info (Card element's innerText)
+
+const cardInfo = {
+    plantName,
+    latinName,
+    light,
+    water,
+    status,
+    notes
+}
+```
 
 
-
-
-
-
-
-
-###  Toggling Part - 01
 
  
 
