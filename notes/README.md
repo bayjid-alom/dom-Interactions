@@ -105,6 +105,41 @@ const cardInfo = {
 }
 ```
 
+## Push []
+- Thrive button click korle Count++ hobe. But first click only
+- if include item in list - then not add
+- find()
+- thrivingList = []
+
+```
+// thrivingList এবং   cardInfo match করাতে হবে..
+const plantExist = thrivingList.find(item => item.plantName == cardInfo.plantName);
+if (!plantExist) {
+    thrivingList.push(cardInfo)
+}
+console.log(thrivingList)
+```
+
+## Info showing
+- Thriving clicked -- showing somewhere -- that's why
+- filtered section create
+
+```
+<!-- Filtered Section -->
+<section id="filtered-section">
+<!-- Empty -->
+</section>
+
+````
+- const filteredSection = document.getElementById("filtered-section");
+
+- NOW . make a function renderThriving()
+- Called -  renderThriving()  কোথায়?  mainContainer e event.target that's why
+maincontainer er ekdom last e call korte hobe
+
+
+
+
 
 
  

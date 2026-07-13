@@ -13,9 +13,9 @@ const strugglingBtn = document.getElementById("struggling-filter-btn")
 
 const allCardSection = document.getElementById("all-cards");
 // console.log(allCardSection.children.length)
-
 const mainContainer = document.querySelector("main");
-console.log(mainContainer)
+const filteredSection = document.getElementById("filtered-section");
+
 
 
 function calculateCount() {
@@ -62,7 +62,7 @@ mainContainer.addEventListener("click", function (event) {
     const status = parentNode.querySelector(".status").innerText;
     const notes = parentNode.querySelector(".notes").innerText;
 
-    console.log(plantName, light, water, status, notes)
+    // console.log(plantName, light, water, status, notes)
 
     const cardInfo = {
         plantName,
@@ -72,9 +72,78 @@ mainContainer.addEventListener("click", function (event) {
         status,
         notes
     }
+    // console.log(cardInfo)
 
-    console.log(cardInfo)
 
+
+    // thrivingList এবং   cardInfo match করাতে হবে..
+    const plantExist = thrivingList.find(item => item.plantName == cardInfo.plantName);
+    if (!plantExist) {
+        thrivingList.push(cardInfo)
+    }
+    // console.log(thrivingList)
+
+    renderThriving()
 })
+
+
+// Filtered section e push korte hobe
+function renderThriving() {
+    filteredSection.innerHTML  = "";
+
+    for(let thrive of thrivingList){
+        console.log(thrive)
+
+        let div = document.createElement("div");
+        // Card er class name added
+        div.className = "card flex justify-between my-6 py-6 border border-gray-300 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1  p-4"
+
+        // Card er body ta paste
+        div.innerHTML = `
+         <div class="leftside space-y-6">
+                    <!-- part - 01 -->
+                    <div>
+                        <p class="plantName text-4xl">Plant Name 01</p>
+                        <p class="latinName">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-3">
+                        <p class="light bg-gray-200 rounded-md px-3 py-1">Bright Indicate</p>
+                        <p class="water bg-gray-200 rounded-md px-3 py-1">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                    <div>
+                        <p class="status">Not Applicable</p>
+                        <p class="notes">New leaf unfurling by the east window.</p>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <button
+                            class="thriving-btn bg-green-200 px-4 py-2 rounded-md border border-green-200  hover:border hover:border-green-500 transition-all duration-300 ease-in-out">Thrive</button>
+
+                        <button
+                            class="struggling-btn bg-red-200 px-4 py-2 rounded-md border border-red-200  hover:border hover:border-red-500 transition-all duration-300 ease-in-out">Struggle</button>
+                    </div>
+                </div>
+
+
+                <div class="rightside">
+                    <button
+                        class="bg-red-100 text-red-500 px-4 py-2 rounded-md border border-red-200  hover:border hover:border-red-500 transition-all duration-300 ease-in-out">Delete</button>
+                </div>
+
+        `;
+
+        // 20:00
+
+
+
+
+
+    }
+
+}
+
+
 
 
