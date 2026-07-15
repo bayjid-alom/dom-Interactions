@@ -102,6 +102,7 @@ const cardInfo = {
     water,
     status,
     notes
+    // এরপর thrivingList এ আছে কিনা চেক করতে হবে।
 }
 ```
 
@@ -126,16 +127,30 @@ console.log(thrivingList)
 
 ```
 <!-- Filtered Section -->
+
 <section id="filtered-section">
 <!-- Empty -->
 </section>
 
 ````
 - const filteredSection = document.getElementById("filtered-section");
+```
 
 - NOW . make a function renderThriving()
 - Called -  renderThriving()  কোথায়?  mainContainer e event.target that's why
 maincontainer er ekdom last e call korte hobe
+
+
+- mainContainer e event listener na diye oi thrive button e dibo
+- mainContainer এর ভিতরের অংশ সম্পূর্ণ কাট করে -
+
+```
+if (event.target.classList.contains('thriving-btn')) {
+// এখানে পেস্ট করে দিতে হবে।
+}
+```
+
+
 
 
 
